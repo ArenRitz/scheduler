@@ -1,7 +1,7 @@
-// import Appointment from "components/Appointment";
+import React from "react";
 import "components/Appointment/styles.scss";
 
-import React from "react";
+
 
 
 
