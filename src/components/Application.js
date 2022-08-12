@@ -5,7 +5,7 @@ import "components/Application.scss";
 import DayList from "components/DayList";
 import Appointment from "components/Appointment";
 import axios from "axios";
-import { getAppointmentsForDay, getInterview } from "helpers/selectors";
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 //DATA that will be fetched through API later
 /*
 
@@ -100,6 +100,8 @@ const dailyAppointments = getAppointmentsForDay(state, state.day);
 
 const schedule = dailyAppointments.map((appointment) => {
   const interview = getInterview(state, appointment.interview);
+  const interviewers = getInterviewersForDay(state, state.day);
+
 
   return (
     <Appointment
@@ -107,6 +109,8 @@ const schedule = dailyAppointments.map((appointment) => {
       id={appointment.id}
       time={appointment.time}
       interview={interview}
+      interviewers={interviewers}
+
     />
   );
 });

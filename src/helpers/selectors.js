@@ -28,3 +28,25 @@ export function getAppointmentsForDay(state, dayS) {
       interviewer: interviewerInfo
     }
   }
+
+  export function getInterviewersForDay(state, day) {
+    let daysInterviewerIDs = [];
+
+    for (let d of state.days) {
+      if (d.name === day) {
+        daysInterviewerIDs = d.interviewers;
+      }
+    };
+
+    if (daysInterviewerIDs.length === 0) {
+      return [];
+    };
+
+    let daysInterviewerDets = [];
+
+    for (let itv of daysInterviewerIDs) {
+      daysInterviewerDets.push(state.interviewers[itv]);
+    };
+    
+    return daysInterviewerDets;
+  };
