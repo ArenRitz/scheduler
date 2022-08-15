@@ -149,8 +149,6 @@ export default function Application(props) {
     return axios(req).then(() =>{
       setState({...state, appointments});
     })
-
-
   }
 
 
