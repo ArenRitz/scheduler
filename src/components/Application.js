@@ -97,6 +97,11 @@ export default function Application(props) {
   }, []);
 
 
+
+
+
+
+  // Save interview to the database
   function bookInterview(id, interview) {
     // console.log(id, interview);
 
@@ -119,12 +124,39 @@ export default function Application(props) {
     }
     return axios(PutReq).then(() => {
       setState({...state, appointments})
+    });
+  }
+
+
+  // Delete interview from the database
+  function cancelInterview(id){
+    const appointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+
+    const url =`http://localhost:8001/api/appointments/${id}`;
+
+    let req={
+      url,
+      method: 'DELETE',
+      data:appointment
+    }
+    return axios(req).then(() =>{
+      setState({...state, appointments});
     })
 
 
-
-
   }
+
+
+
+
+
 
 const dailyAppointments = getAppointmentsForDay(state, state.day);
 
@@ -141,6 +173,7 @@ const schedule = dailyAppointments.map((appointment) => {
       interview={interview}
       interviewers={interviewers}
       bookInterview={bookInterview}
+      cancelInterview={cancelInterview}
     />
   );
 });
