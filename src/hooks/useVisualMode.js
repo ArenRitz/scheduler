@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+
+// handle transitions between modes
 export default function useVisualMode(initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
@@ -8,7 +10,7 @@ export default function useVisualMode(initial) {
   let historyB = [...history];
 
   const transition = (newMode, replace = false) => {
-
+    // if replace is true, replace the current mode with the new mode
     if (replace) {
       setMode(newMode);
     } else {
@@ -17,7 +19,7 @@ export default function useVisualMode(initial) {
       setHistory(historyT);
     }
   };
-
+  // transition to the previous mode in the history
   const back = () => {
     historyB.pop();
     setHistory(historyB);

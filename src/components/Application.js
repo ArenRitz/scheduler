@@ -1,6 +1,3 @@
-// Imports
-
-
 import "components/Application.scss";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 import Appointment from "components/Appointment";
@@ -13,6 +10,8 @@ export default function Application() {
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
 
+
+  // return schedule array which contains all the appointments for the day
   const schedule = dailyAppointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
     const interviewers = getInterviewersForDay(state, state.day);

@@ -5,7 +5,7 @@ import React from "react";
 export default function InterviewerList(props) {
 
 
-
+  // returns array containing all interviewers to be displayed on the form
   let interviewers = props.interviewers.map(interviewer => {
     return (
       <InterviewerListItem
@@ -17,9 +17,6 @@ export default function InterviewerList(props) {
       />
     );
   });
-
-
-
 
   return (
     <section className="interviewers">

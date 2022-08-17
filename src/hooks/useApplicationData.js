@@ -43,7 +43,7 @@ export default function useApplicationData() {
 
 // Save interview to the database
 function bookInterview(id, interview) {
-  // console.log(id, interview);
+
 
   const appointment = {
     ...state.appointments[id],
