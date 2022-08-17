@@ -99,7 +99,7 @@ function cancelInterview(id){
     [id]: appointment
   };
 
-  const url =`http://localhost:8001/api/appointments/${id}`;
+
 
   const dayOfWeek = findDay(state.day)
 
@@ -112,15 +112,14 @@ function cancelInterview(id){
   days[dayOfWeek] = day;
 
 
+  const delurl =`http://localhost:8001/api/appointments/${id}`;
 
-  let req={
-    url,
-    method: 'DELETE',
-    data:appointment
-  }
-  return axios(req).then(() =>{
-    setState({...state, appointments, days});
+
+  return axios.delete(delurl, appointment).then(() => {
+    setState({...state, appointments,days});
   })
+
+
 }
 
 
