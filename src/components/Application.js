@@ -1,12 +1,12 @@
 // Imports
 
-import React from "react";
-import "components/Application.scss";
-import DayList from "components/DayList";
-import Appointment from "components/Appointment";
-import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
-import useApplicationData from "hooks/useApplicationData";
 
+import "components/Application.scss";
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
+import Appointment from "components/Appointment";
+import DayList from "components/DayList";
+import React from "react";
+import useApplicationData from "hooks/useApplicationData";
 
 export default function Application() {
   const { state, setDay, bookInterview, cancelInterview } = useApplicationData();

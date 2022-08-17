@@ -1,9 +1,7 @@
-import React from "react";
-
-import { render, cleanup, waitForElement, fireEvent, getByText, getAllByTestId, getByAltText, getByPlaceholderText, queryByText, queryByAltText } from "@testing-library/react";
-import axios from "axios";
+import {cleanup, fireEvent, getAllByTestId, getByAltText, getByPlaceholderText, getByText, queryByAltText, queryByText, render, waitForElement } from "@testing-library/react";
 import Application from "components/Application";
-
+import axios from "axios";
+import React from "react";
 
 afterEach(cleanup);
 
