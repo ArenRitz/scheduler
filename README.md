@@ -1,24 +1,24 @@
 # Interview Scheduler Web Application
 ## Project Description
 
-temp
+Interview scheduler is a web app that allows to track student interviews.
+It is built with React using built-in and custom hooks, SASS, Jest and Cypress for unit, integration and end-to-end testing.
 
 ## Project Features
-- The landing page showcases the appointment days (i.e. Monday to Friday) which are displayed and color-coded to indicate selection as well as availability on any day.
-- Below the days displayed, there is a small snapshot of the available spots for interviews on that day which updates in real time after any changes to the appointment state.
+- Days and available spots are displayed on the left and are color-coded to indicate selection and availability for each day.
 - A user can book an interview by typing in their name and selecting an interviewer from a list, followed by saving the appointment.
 - A user is able to switch between any of the days, view the available (if any) appointment spots, book an appointment, cancel an existing appointment by pressing the trash icon, as well as edit an existing appointment with updated information such as name and interviewer by clicking the edit icon.
 - When a user wants to cancel an appointment or edit an existing appointment, a confirmation box wil appear to ensure their action is verified prior to execution.
 
 
 ### Landing Page
-!['home-page'](temp link)
+!['home-page'](https://github.com/ArenRitz/scheduler/blob/master/docs/Landing-Page.png)
 
 ### Booking New Interview 
-!['booking-new-appointment'](temp link)
+!['booking-new-appointment'](https://github.com/ArenRitz/scheduler/blob/master/docs/Book.gif)
 
 ### Cancelling An Existing Interview  
-!['cancel-appointment'](temp link)
+!['cancel-appointment'](https://github.com/ArenRitz/scheduler/blob/master/docs/Delete.gif)
 
 ## Setup
 
