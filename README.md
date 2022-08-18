@@ -1,7 +1,7 @@
-# Interview Scheduler Web Application
+# Interview Scheduler
 ## Project Description
 
-Interview scheduler is a web app that allows to track student interviews.
+Interview scheduler is a web application to track student interviews.
 It is built with React using built-in and custom hooks, SASS, Jest and Cypress for unit, integration and end-to-end testing.
 
 ## Project Features
