@@ -79,7 +79,7 @@ function bookInterview(id, interview) {
     [id]: appointment
   };
   
-  const url =`http://localhost:8001/api/appointments/${id}`;
+  const url =`/api/appointments/${id}`;
 
 
   return axios.put(url, appointment).then(() => {
@@ -112,7 +112,7 @@ function cancelInterview(id){
   days[dayOfWeek] = day;
 
 
-  const delurl =`http://localhost:8001/api/appointments/${id}`;
+  const delurl =`/api/appointments/${id}`;
 
 
   return axios.delete(delurl, appointment).then(() => {
